@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>for 구구단</title>
+</head>
+<body>
+  <script>
+    const dan = 5; // 이 부분을 수정하면 구구단이 나온다
+    document.write(dan + " x 1 = " + dan * 1 + "<br>" );
+    document.write(dan + " x 1 = " + dan * 2 + "<br>" );
+    document.write(dan + " x 1 = " + dan * 3 + "<br>" );
+    document.write(dan + " x 1 = " + dan * 4 + "<br>" );
+    document.write(dan + " x 1 = " + dan * 5 + "<br>" );
+    document.write(dan + " x 1 = " + dan * 6 + "<br>" );
+    document.write(dan + " x 1 = " + dan * 7 + "<br>" );
+    document.write(dan + " x 1 = " + dan * 8 + "<br>" );
+    document.write(dan + " x 1 = " + dan * 9 + "<br>" );
+
+
+    const dan1 = 3 // 위와 같으면 안되니 변수 이름을 바꿔준다
+    for(let i=1; i<=9; i++ ){
+      // 초기값 let i=1 지정 ,, 조건문 i에게 조건을 줌 ,, 증감연산자++
+         cosnt dan은 변하지 않는 데이터 , let은 변하는 데이터   */
+      // {}은 불락이라고 하며, 이 부분에 실행문을 넣는다
+      console.log(i);
+      document.write(dan1 + " x " + i + " = " + dan1*i + "<br>")
+    }
+
+    // function gugudan(x,y){
+    //   // fucton은 변수, gugudan은 인자
+    //   // document.write(total){      }
+    //   for(let i=1; i<10; i++){
+    //     document.write(x + " x " + i + " = " + x*i );
+    //   gugudan(3); //함수호출     }
+  </script>
+<style>
+  div { float:left; width: 200px; border: 1px solid #000; }
+</style>
+  <div>
+    <script>gugudan(3)</script>
+  </div>
+  <div>
+    <script>gugudan(4)</script>
+  </div>
+
+<script>
+  let x = 1;
+  let sum = 0;
+  while(x>=100){
+    // document.write(x + " ");
+    sum = sum + x; // sum += x;
+    x++; // x = x+1;
+  }
+  console.log(sum);
+  document.write("1~100의 합은 : " + sum);
+</script>
+
+
+</body>
+</html>

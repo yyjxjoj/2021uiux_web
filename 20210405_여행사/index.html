@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HIMEDIA-TRAVEL</title>
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-3.1.1.min.js" charset="utf-8"></script>
+  <script src="js/jquery.bxslider.js" charset="utf-8"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <script>
+    $(document).ready(function(){
+      $(".slide").bxSlider({
+        auto:true,
+      });
+    });
+  </script>
+</head>
+<body>
+  <header id="headerWrap"> <!-- 100% -->
+    <div class="header">
+        <div class="utilmenu"> <!-- 980px -->
+          <h1 class="log">
+            <a href="index.html"><img src="images/logo.png" alt="홈"></a>
+          </h1>
+
+          <div class="searchWrap">
+            <form action="#">
+              <legend>검색</legend>
+              <label for="search">SEARCH</label>
+              <input type="text" id="search" name="search"
+              placeholder="검색어를 입력하세요." class="inp-field">
+              <span class="icon search">search</span>
+            </form>
+          </div> <!-- end:searchWrap -->
+          <div class="contact clearfix">
+            <div class="call">+82 02 1234 5678</div>
+            <div class="sns">
+              <a href="http://facebook.com">
+                  <img src="images/sns_fa.png" alt="페이스북"></a>
+              <a href="https://twitter.com/">
+                  <img src="images/sns_tw.png" alt="트위터"></a>
+              <a href="https://blog.naver.com/">
+                  <img src="images/sns_b.png" alt="블로그"></a>
+              <a href="https://www.instagram.com/">
+                  <img src="images/sns_in.png" alt="인스타그램"></a>
+            </div>
+          </div>
+        </div> <!-- end:utilmenu -->
+
+    <Wrap/div> <!-- end:header -->
+    <div class="gnbWrap">
+      <ul class="gnb clearfix"> <!-- 980px -->
+        <li><a href="#">여행도시</a></li>
+        <li><a href="#">호텔예약</a></li>
+        <li><a href="#">렌트카</a></li>
+        <li><a href="#">여행TIP</a></li>
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">커뮤니티</a></li>
+      </ul>
+    </div>  <!-- end:gnb -->
+  </header>
+
+  <!-- 메인화면 -->
+  <div id="contentWrap">
+    <div class="main_pack clearfix"> <!-- 배경 풍선그림 삽입부분 -->
+      <div class="contents">
+
+        <!-- 예약 폼 영역 -->
+        <div class="booking">
+          <div class="formWrap">
+            <p>예약폼</p>
+          </div>
+        </div> <!-- end:booking -->
+
+        <div class="banner clearfix"><!-- 배너 2장 -->
+          <div class="banner01 card ">
+            <img src="images/card01.jpg" alt="프랑스">
+            <div class="prodbox">
+              <a href="#">
+                <p class="prod_name">프랑스</p>
+                <p class="prod_price">￦1,900,000~</p>
+                <span class="arrow">arrow</span>
+              </a>
+            </div>
+          </div> <!-- end:banner01 -->
+          <div class="banner02 card ">
+            <img src="images/card02.jpg" alt="일본">
+            <div class="prodbox">
+              <a href="#">
+                <p class="prod_name">일본</p>
+                <p class="prod_price">￦890,000~</p>
+                <span class="arrow">arrow</span>
+              </a>
+            </div>
+          </div> <!-- end:banner01 -->
+        </div>
+      </div> <!-- end:contents -->
+    </div> <!-- end:main_pack -->
+
+    <!-- 우측 타이틀 문구 -->
+    <div class="title">
+      <h2>TRAVEL GO</h2>
+      <p>지금, 여행이 떠나고 싶다면?<br>
+        하이미디어와 여행을 떠나자!</p>
+    </div>
+  </div> <!-- end:contentWrap -->
+
+
+
+</body>
+</html>

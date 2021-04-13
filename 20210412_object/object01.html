@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>object</title>
+</head>
+<body>
+  <p id="var1">정보1</p>
+  <p id="var2">정보2</p>
+  <p id="var3" class="view1">정보3</p>
+  <p id="var4" class="view1">정보4</p>
+  <script>
+    console.log ( document.getElementById("var1").innerHTML );
+    console.log ( document.getElementsByTagName("p")[0].innerHTML );
+    console.log ( document.getElementsByTagName("body")[0].innerHTML );
+
+    document.getElementById("var1").innerHTML = "변경1";
+    document.getElementsByTagName("p")[1].innerHTML = "변경2";
+    document.getElementsByTagName("body")[0].style.backgroundColor = "skyblue";
+    document.getElementsByClassName("view1")[0].innerHTML = "변경3";
+    document.getElementsByClassName("view1")[1].innerHTML = "변경4";
+    document.getElementsByTagName("bgcolor")[0].style.backgroundColor = "pink";
+
+     // querySelectorAll 은 id와 class를 모두 지정할수있다.
+     // 자바스크립트에선 -하이픈을 쓰지않는다. 하이픈을 쓸 경우 ""를 쓴다.
+     // ex) font-size가 아니라 fontSize로 작성한다.
+    document.querySelectorAll(".view1")[0].style.backgroundColor = "orange";
+    document.querySelectorAll(".view1")[1].style.backgroundColor = "orange";
+    // 위의 내용은 for문으로도 작성 가능하다.
+    // querySelector의 view값을 구해 length값을. 어쩐다고??
+    function view(){
+      const view = document.querySelectorAll(".view1");
+      console.log ( view.length );
+
+      for(let i=0; i<view.length; i++){
+        view[i].style.border = "3px solid #f00";
+      }
+    }
+
+    function bgcolor(){
+      document.getElementsByTagName("body")[0].style.backgroundColor = "pink";
+    }
+
+    function btn(){
+      document.get
+    }
+
+  </script>
+  <button onclick="view()">테두리변경</button>
+  <!-- onclick = 버튼을 클릭했을때 실행되는 행동을 지시함 -->
+  <button onclick="bgcolor()">배경변경 핑크</button>
+  <button onclick="btn()">배경변경 회색</button>
+</body>
+</html>

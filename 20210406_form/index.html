@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>form</title>
+</head>
+<body>
+  <form action="welcome.php" method="get">
+  <!-- get방식 : 이 쪽에도, 저 쪽에도 사용할 수 있게 함 -->
+  <!-- post방식 : 한 공간안에 있는 서버안에서만 사용할 수 있음 -->
+
+  <fieldset> <!-- 박스 테두리 -->
+    <legend>기본정보</legend> <!-- 박스를 뚫은 타이틀명 -->
+    <label for="name">이름</label>
+    <input type="text" id="na" name-"name">  <!-- 입력상자 -->
+    <label for="email">이메일</label>
+    <input type="text" id="email" name="mail">
+  </fieldset>
+  <input type="submit" value="정보입력">
+  </form>
+</body>
+</html>

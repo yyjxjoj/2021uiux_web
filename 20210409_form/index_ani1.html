@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>animation</title>
+  <style>
+    .box {
+      width: 100px; height: 100px;
+      background: skyblue;
+      animation-name: ani;
+      animation-duration: 1s; /* n초 동안 아래조건으로 재생하겠다 */
+
+      animation-fill-mode: forwards; /* end */
+      animation-iteration-count: infinite; /*재생횟수*/
+      animation-direction: alternate; /*반복. 갔다가 되돌아옴*/
+      animation-delay: 0.5s; /* n초 후 작동하겠다. */
+      animation-timing-function:linear;
+    }
+    @keyframes ani{
+      from {width: 100px; background: #f00; opacity: 0;}
+      to {width: 300px; background: #0f0; opacity: 1;}
+    }
+
+    div.boxWrap {
+      width: 600px; height: 600px; background: #eee;
+      position: relative;
+    }
+    div.boxWrap .box01 {
+      width: 0; height: 10px;
+      background: #000;
+
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+    div.boxWrap .box02 {
+      width: 10px; height: 0px;
+      background: #f00;
+      position: absolute; right: 0; top: 0;
+
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-delay: 1s;
+    }
+
+    div.boxWrap .box03 {
+      width: 0; height: 10px;
+      background: #0f0;
+      position: absolute; bottom: 0; right: 0;
+
+      animation-duration: 1s;
+      animation-fill-mode:forwards;
+      animation-delay: 2s;
+      animation-direction:reverse;
+    }
+
+    div.boxWrap .box04 {
+      width: 10px; height: 0;
+      background: #00f;
+      position: absolute; bottom: 0; left:0;
+
+      animation-duration: 1s;
+      animation-fill-mode:forwards;
+      animation-delay: 3s;
+    }
+
+
+
+@keyframes box01 {
+  from { width: 0; }
+    to { width: 600px; }
+}
+
+@keyframes box02 {
+  from { height: 0; }
+    to { height: 600px; }
+}
+
+@keyframes box03 {
+  from { width: 600px; }
+    to { width: 0; }
+}
+
+@keyframes box04 {
+  from { height: 0; }
+    to { height: 600px; }
+}
+
+
+/* 박스 위에 마우스오버를 했을때 애니메이션이 뜨는 구성 */
+/* 마우스오버 없이 애니메이션을 실행하고 싶을 경우, animation-name을
+다시 해당태그 안으로 넣어주면 된다. */
+.boxWrap:hover .box01 { animation-name:box01; }
+.boxWrap:hover .box02 { animation-name:box02; }
+.boxWrap:hover .box03 { animation-name:box03; }
+.boxWrap:hover .box04 { animation-name:box04; }
+
+
+
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <div class="boxWrap">
+    <div class="box01"></div>
+    <div class="box02"></div>
+    <div class="box03"></div>
+    <div class="box04"></div>
+  </div>
+</body>
+</html>

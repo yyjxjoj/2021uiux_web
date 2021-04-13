@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+body {background: #eee;}
+
+#wrap {width: 460px; margin: 0 auto; }
+#header { padding: 60px 0;}
+#header h1 {
+  width: 238px;
+  height: 43px;
+  margin: 0 auto;
+  background-image: url(../images/pc_sp_join.png);
+  background-position: 0 -106px;
+
+}
+
+#header h1 a { display: block; text-indent: -9999px; }
+
+fieldset {
+  border: 1px solid #dadada;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+legend, .blind { display: block; position: absolute; left: 0; top:-9999px}
+
+.content fieldset .field {
+  position: relative; /*.field .icon의 부모요소이므로*/
+  border: 1px solid #dadada;
+}
+
+/* 아이디입력창 디자인style */
+.content fieldset .field .inp-field {
+  width: 340px; height: 48px; border: 0 none;
+  color:#333; font-size:0.8rem;
+  text-indent: 12px; /*텍스트 앞 여백설정*/
+}
+
+/*@naver.com 부분 디자인style*/
+.content fieldset .field .icon {
+  display: block; width: 97px; height: 48px;
+  position: absolute; /*자식요소를 독립시킴*/
+  right: 10px; top: 0;
+  background-image: url(../images/ico_join3.png);
+  text-indent: -9999px;
+}
+
+.content fieldset .field .icon.mail {
+  background-position: 0 -45px;
+}
+.content fieldset .field .icon.pass {
+  background-position: 0 -466px;
+}
+.content fieldset .field .icon.pass1 {
+  background-position: 0 -515px;
+}
+
+.content .btn-area { background: pink;}
+
+.content .btn-area .btn-submit {
+  width: 100%; height: 59px;
+  border: 0 none;
+  background: #1fbc02 url(../images/btn_join2.gif) no-repeat 50% -3px;
+  text-indent: -9999px;
+  cursor : pointer;
+}
+
+.content fieldset .field.btn-radio { height: 49px; }
+/* .field.btn-radio 에서 .을 띄우면 자식요소, 붙여 쓰면 본인이라는 의미 */
+.content fieldset .field .btn-label{
+  width: 212px; height: 31px;
+  display: block; background: #eee;
+  border: 1px solid #dcdcdc; text-align: center;
+  line-height: 31px; cursor: pointer;
+  position: absolute; top: 8px;
+}
+
+.content fieldset .field .btn-label.male { left: 15px; }
+.content fieldset .field .btn-label.female { right: 15px; }
+
+.content fieldset .field.birth label {
+  display: block; float: left;
+  width: 53px; height: 49px;
+  text-align: center;
+  line-height: 49px;
+  border-right: 1px solid #eee;
+}
+.content fieldset .field.birth select,
+.content fieldset .field.confirm select {
+  width: 110px; height: 29px; border: 0 none;
+  font-size: 0.8rem; text-indent: 5px;
+  float: left; margin-top: 10px; margin-left: 10px; margin-right: 7px;
+  /* 자식요소의 첫번째에겐 margin을 되도록 쓰지않는게 좋으나
+    부득이하게 써야하는 상황이 있다. 바로 지금 */
+}
+.content fieldset .field.birth input,
+.content fieldset .field.confirm input { float: left; }
+
+.content fieldset .field.birth .field_wall,
+.content fieldset .field.confirm .field_wall {
+  float: left; width: 0; height: 29px;
+  border-right: 1px solid #cdcdcd;
+  text-indent: -9999px; margin-top: 10px;
+}
+
+.content fieldset .field.confirm .btn-click {
+  width: 99px; height: 31px;
+  border: 1px solid #dcdcdc;
+  background: #fff; cursor: pointer;
+  margin-left: 13px; margin-top: 8px;
+}
+
+/* text영역 클릭시 생기는 테두리 디자인style */
+input:focus { outline : 1px solid #1fbc02; }
+/* .btn-area input:focus { outline : none; }
+  혹은 input:focus[type='submit' { outline : none; } */
+
+
+
+/* common 공통적으로 쓰는 태그 */
+.w458 { width: 458px !important;}
+.w130 { width: 130px !important;}
+.w145 { width: 145px !important;}
+.w205 { width: 205px !important;}
+.w332 { width: 332px !important;}
