@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../../js/jquery-3.1.1.min.js" charset="utf-8"></script>
+
+  <script>
+  $(document).ready(function(){
+    console.log( $("p").eq(1).css("background") );
+    $("p").eq(2).css("color","red");
+    document.getElementsByTagName("p")[3].style.color="blue";
+  });
+  // script에서의 순서의 숫자는 0부터 시작한다.
+  </script>
+
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, molestiae molestias ad. Perferendis enim alias accusantium numquam fuga cupiditate dolore atque non nihil, sunt similique odit facere, animi hic omnis.</p>
+  <p>Corporis, tempore! Reiciendis repudiandae sunt ad consectetur natus nisi labore magnam numquam, distinctio aliquid voluptates consequatur, enim debitis nam sapiente laudantium error. Quod voluptatibus, accusamus necessitatibus quas atque velit tempore!</p>
+  <p>Iure optio est enim perferendis? Dolorum maxime deserunt fuga inventore quas, quisquam debitis ut, consectetur, adipisci quibusdam tempore sed excepturi beatae. Molestiae doloremque animi cumque similique fuga magnam ea, quae?</p>
+  <p>Id fugit recusandae odio eum, aperiam. Pariatur dolor labore reiciendis voluptatum optio temporibus earum placeat unde eveniet recusandae eligendi vitae soluta distinctio id commodi non, exercitationem! Maxime, eum! Nostrum, quod.</p>
+  <p>Necessitatibus facere, rem blanditiis. Libero maiores unde, fugiat ab sed omnis nulla ratione laboriosam, asperiores! Recusandae, animi aliquam omnis hic natus suscipit dicta maiores id assumenda optio dignissimos ratione, voluptate.</p>
+
+  <ul class="tab">
+    <li>menu1</li>
+    <li>menu2</li>
+    <li>menu3</li>
+    <li>menu4</li>
+    <li>menu5</li>
+  </ul>
+  <div class="boxWrap">
+    <div class="box1">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    <div class="box2">2. Lorem ipsum dolor sit amet, consectetur adipi  sicing elit.</div>
+    <div class="box3">3. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    <div class="box4">4. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    <div class="box5">5. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+  </div>
+<script>
+  // $(".tab>li").on("click",funtion(){})
+  // $(".boxWrap>div").hide();
+  // $(".boxWrap>div").eq(0).show();
+
+  $(".boxWrap>div").hide().eq(0).show();
+
+  $(".tab>li").click(function(){
+    //$(".tab>li").eq(0).css("background","pink");
+    $(".tab>li").css("background","white");
+    $(this).css("background","pink");
+
+    console.log($(this).index());
+
+    $(".boxWrap>div").hide().eq($(this).index()).show();
+  });
+
+</script>
+
+
+</body>
+</html>

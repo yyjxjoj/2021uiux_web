@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../../js/jquery-3.1.1.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <style>
+  body { margin: 0 auto; width: 900px; }
+  .menu > li {
+    float: left;
+    width: calc(900px / 5);
+    line-height: 40px;
+    text-align: center;
+    background: pink;
+  }
+
+  .boxWrap > div {
+    padding: 20px;
+    border: 1px solid #000;
+  }
+  </style>
+
+  <script>
+    $(document).ready(function(){
+      $(".boxWrap>div").hide().eq(0).show(); //eq는 배열
+      $(".menu>li").click(function(){
+        $(".menu>li").css("background","white");
+        $(this).css("background","pink");
+
+        $(".boxWrap>div").hide().eq($(this).index()).show();
+      });
+    });
+  </script>
+
+
+
+</head>
+
+<body>
+    <ul class="menu clearfix">
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
+      <li>menu5</li>
+    </ul>
+    <div class="boxWrap clearfix">
+      <div class="box1">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, molestiae molestias ad. Perferendis enim alias accusantium numquam fuga cupiditate dolore atque non nihil, sunt similique odit facere, animi hic omnis.</div>
+      <div class="box2">2. Corporis, tempore! Reiciendis repudiandae sunt ad consectetur natus nisi labore magnam numquam, distinctio aliquid voluptates consequatur, enim debitis nam sapiente laudantium error. Quod voluptatibus, accusamus necessitatibus quas atque velit tempore!</div>
+      <div class="box3">3. Iure optio est enim perferendis? Dolorum maxime deserunt fuga inventore quas, quisquam debitis ut, consectetur, adipisci quibusdam tempore sed excepturi beatae. Molestiae doloremque animi cumque similique fuga magnam ea, quae?</div>
+      <div class="box4">4. Id fugit recusandae odio eum, aperiam. Pariatur dolor labore reiciendis voluptatum optio temporibus earum placeat unde eveniet recusandae eligendi vitae soluta distinctio id commodi non, exercitationem! Maxime, eum! Nostrum, quod.</div>
+      <div class="box5">5. Necessitatibus facere, rem blanditiis. Libero maiores unde, fugiat ab sed omnis nulla ratione laboriosam, asperiores! Recusandae, animi aliquam omnis hic natus suscipit dicta maiores id assumenda optio dignissimos ratione, voluptate.</div>
+    </div>
+
+
+
+
+</body>
+</html>

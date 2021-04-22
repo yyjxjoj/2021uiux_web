@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>onload</title>
+  <script>
+    // window.onload = function(){
+    //   alert("hi_3");
+    // }
+
+    window.onload = dLoad;
+
+
+    function dLoad(){
+      alert("hi_4")
+    }
+  </script>
+</head>
+<body>
+<!-- <body onload="alert('hi')"> 바디에 바로 alert 넣기-->
+  <script>
+    // 스크립트로 alert 넣기
+    // body와 script에 동시에 alert를 넣을 경우 scripte의 alert가 먼저 실행된다. head안, body안에 script를 넣을 경우 body쪽 script가 실행됨.
+    // window.onload = function(){
+    //   alert("hi_2");
+    // }
+  </script>
+</body>
+</html>
