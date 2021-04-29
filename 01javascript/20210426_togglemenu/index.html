@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>togglemenu</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <script src="../../js/jquery-3.1.1.min.js"></script>
+  <style>
+    .toggleMenu{
+      width: 50px;height: 50px;
+      border: 1px solid #000;
+      position: absolute;
+      cursor:pointer;
+      right: 0; top: 0;
+      display: none;
+    }
+    .toggleMenu div{
+      width: 34px;height: 5px;
+      background: #000;
+      border-radius:3px;
+      position: absolute;
+      left:50%;transform:translateX(-50%);
+      transition:0.3s
+    }
+    .bar1{top:11px}
+    .bar2{top:22px;}
+    .bar3{top:33px;}
+
+    .toggleMenu.change .bar1{
+      left:50%;top:50%;transform:translate(-50%,-50%) rotate(-45deg)
+    }
+    .toggleMenu.change .bar2{
+      opacity:0
+    }
+    .toggleMenu.change .bar3{
+      left:50%;top:50%;transform:translate(-50%,-50%) rotate(45deg)
+    }
+
+    .menuWrap {
+      width: 1200px; height: 50px;
+      background: pink;
+      margin: 0 auto;
+      position: relative;
+    }
+    .menuWrap h1 {
+      background: skyblue;
+      width: 100px; height: 50px;
+      text-align: center;
+    }
+
+    #myTopMenu {
+      position: absolute;
+      left: 100px; top: 0;
+    }
+    #myTopMenu a {
+      display: block;
+      float: left;
+      padding: 14px 10px;
+    }
+    .content {width: 1200px; margin: 0 auto;}
+
+    @media screen and (max-width:575px){
+      body{background: green;}
+      .menuWrap{width: 100%;}
+      .toggleMenu{display: block;}
+      #myTopMenu{
+        position: fixed; width: 100%; height: 100%;
+        background: orange; left: 0; top: -100%;
+        display: flex; justify-content: center; align-items: center;
+      }
+      .topNav{background: green; width: 50%;}
+      .topNav a{float:initial !important; text-align: center;}
+    }
+    @media screen and (min-width:576px) and (max-width:991px){
+      body{background: skyblue;}
+      .menuWrap {width: 100%;}
+      #myTopMenu{ left: initial; right: 0;}
+      .content {width: 100%; padding: 20px 20px;}
+    }
+    @media screen and (min-width:992px){
+      .menuWrap {position: fixed; left: 50%; transform: translateX(-50%);}
+      .content {padding-top: 70px;}
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="menuWrap">
+  <h1>logo</h1>
+  <div id="myTopMenu">
+    <nav class="topNav clearfix">
+      <a href="#">HOME</a>
+      <a href="#">NEWS</a>
+      <a href="#">CONTACT</a>
+      <a href="#">PRODUCT</a>
+    </nav>
+  </div>
+  <div class="toggleMenu">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+</div>
+<div class="content">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias ducimus, et odio culpa debitis vero, sed, quisquam explicabo nostrum magnam eligendi vitae, eaque inventore. Animi ut neque rem, vel, ad deleniti distinctio eum nesciunt illo at impedit aliquid laborum totam hic doloremque magnam aperiam omnis inventore eos accusamus, harum natus. Exercitationem eius ut non, blanditiis inventore maxime iure totam commodi assumenda enim tempore nulla dicta esse, repellendus modi obcaecati! Numquam quasi laboriosam veniam quod alias aut vero, voluptas dolore ipsam eligendi culpa cumque tenetur, libero nisi autem expedita aliquid adipisci vitae excepturi ipsum ab illo assumenda explicabo! Voluptatibus provident perspiciatis esse quo numquam enim, illum porro repellat necessitatibus assumenda velit harum deserunt qui accusantium sapiente soluta recusandae. Suscipit accusamus distinctio, nulla numquam rerum, molestias sunt laudantium nobis temporibus, sit doloremque, dolorem tenetur cum facilis eligendi beatae corporis! Possimus, temporibus, expedita? Dolore accusamus numquam itaque dignissimos, molestiae recusandae amet ab vero, ipsum, sit dolores nemo voluptate perferendis magnam facere, sint nisi modi. Iste dolore tenetur sint soluta dolor tempore modi quam blanditiis placeat perspiciatis ducimus ea molestias quis at, quae incidunt commodi consectetur? Perferendis fuga consequuntur dolore minima nobis, ab nisi ex. Labore eum, consequatur maxime illum quos ex aliquam accusamus! Molestiae aliquid, ea asperiores facere quibusdam amet sunt tenetur obcaecati voluptates, animi, laborum consequatur ipsa error esse perferendis dicta deserunt? Repudiandae amet aperiam aliquam minima, rem cupiditate nemo unde ad ipsam. Recusandae pariatur accusantium quo dolore. Ut error, iusto laborum! Tempora error pariatur, ut unde nam. Eum numquam deserunt mollitia et sequi quam, unde voluptates odit. Odio magnam labore ipsa dolore, nihil quasi ab iste commodi aspernatur, consequatur expedita repellendus quibusdam, nemo aperiam, ea voluptate natus? Quibusdam autem beatae, quod! Dicta saepe dolorem laborum, eveniet, ipsum reprehenderit harum sit ullam dolores illo odio repudiandae non aliquam placeat eaque, soluta voluptas aut iure deleniti impedit modi sapiente corporis omnis voluptatibus fuga. Atque qui accusamus consectetur asperiores error ipsum culpa, eius placeat. Cum minima quasi doloremque tempore facilis vitae a optio veniam labore accusantium est dolor totam alias, quo soluta repellat corporis repudiandae, nostrum culpa aperiam! Repellendus deserunt deleniti fugit, at fugiat ipsa. Provident corporis, rerum optio dolor quisquam, deleniti nisi architecto qui dignissimos odit possimus. Incidunt, voluptatem! Dolore quas, odit porro ipsum! Ad eos porro, quae accusantium maxime magnam saepe doloribus nesciunt, fugiat temporibus, ut nam expedita officiis velit consequatur? Voluptatum illum esse, dolorum reprehenderit vitae suscipit id placeat earum atque, perspiciatis a at cupiditate modi veniam ab amet fugiat eius quae? Mollitia ipsa, quam sapiente qui aperiam saepe quaerat ut atque voluptatem in ab eaque quo sit, voluptate quisquam blanditiis eum reiciendis necessitatibus. Iste ex quidem, nostrum sed non nulla architecto optio dolores cupiditate, quod explicabo illum dignissimos totam esse, ratione, accusantium odio corporis obcaecati recusandae? Dolores inventore incidunt expedita magnam, voluptatem molestiae ipsam iste iure. Repudiandae id alias accusamus aperiam porro quae harum recusandae vel aut odio eos, asperiores molestias ad impedit, quidem repellendus labore. Esse vel corrupti earum quia corporis, nesciunt, officiis eligendi voluptate inventore nemo itaque pariatur!
+</div>
+
+  <script>
+    $(".toggleMenu").click(function(){
+      const toggle = $(".toggleMenu").attr("class"); //get
+
+      if(toggle == "toggleMenu"){
+        $(".toggleMenu").addClass("change");
+        // $("#myTopMenu").css("left",0);
+        $("#myTopMenu").stop().animate({top:0})
+      }else{
+        $(".toggleMenu").removeClass("change");
+        // $("#myTopMenu").css("left","-100%");
+        $("#myTopMenu").stop().animate({top:"-100%"})
+      }
+    });
+
+    $(window).resize(function(){
+      $("#myTopMenu").removeAttr("style");
+      $(".toggleMenu").removeClass("change");
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
