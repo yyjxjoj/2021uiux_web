@@ -7,6 +7,7 @@
   <title>steIntervalTime</title>
 </head>
 <body>
+  <p id="time"></p>
   <button onclick="eTime()">멈추기</button>
   <button onclick="sTime()">다시시작</button>
 
@@ -30,10 +31,8 @@
     sTime();
 
     function eTime(){
-      if(myTime == 0){
-        myTime == setInterval("timer()",0);
-      }
-      console.log(myTime)
+      clearInterval(myTime);
+      myTime = 0
     }
   </script>
 </body>
