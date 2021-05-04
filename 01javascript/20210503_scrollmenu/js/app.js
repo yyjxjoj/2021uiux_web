@@ -39,35 +39,35 @@ $(document).ready(function(){
     $("html,body").animate({scrollTop:st})
   });
 
-$(window).scroll(function(){
-  let scrollY = $(window).scrollTop();
+ $(window).scroll(function(){
+   let scrollY = $(window).scrollTop();
 
-  // if(scrollY >= $(".scene").eq(0).offset().top){
-  //   $(".menu>a").removeClass("active").eq(0).addClass("active");
-  // }
-  // if(scrollY >= $(".scene").eq(1).offset().top){
-  //   $(".menu>a").removeClass("active").eq(1).addClass("active");
-  // }
-  // if(scrollY >= $(".scene").eq(2).offset().top){
-  //   $(".menu>a").removeClass("active").eq(2).addClass("active");
-  // }
-  //
-  // for(let i=0,i<$(".scene").length;i++){
-  //   if(scrollY >= $(".scene").eq(i).offset().top){
-  //     $(".menu>a").removeClass("active").eq(i).addClass("active");
-  //   }
-  // }
+   // if(scrollY >= $(".scene").eq(0).offset().top){
+   //   $(".menu>a").removeClass("active").eq(0).addClass("active");
+   // }
+   // if(scrollY >= $(".scene").eq(1).offset().top){
+   //   $(".menu>a").removeClass("active").eq(1).addClass("active");
+   // }
+   // if(scrollY >= $(".scene").eq(2).offset().top){
+   //   $(".menu>a").removeClass("active").eq(2).addClass("active");
+   // }
 
-  $(".scene").each(function(index){
-  //   if(scrollY >= $(".scene").eq(i).offset().top){
-    if(scrollY >= $(this).offset().top){
-      $(".menu>a").removeClass("active").eq(index).addClass("active");
-    }
-  });
+   // for(let i=0;i<$(".scene").length;i++){
+   //   if(scrollY >= $(".scene").eq(i).offset().top){
+   //     $(".menu>a").removeClass("active").eq(i).addClass("active");
+   //   }
+   // }
+
+   $(".scene").each(function(index){
+     //if(scrollY >= $(".scene").eq(index).offset().top){}
+     if(scrollY >= $(this).offset().top){
+       $(".menu>a").removeClass("active").eq(index).addClass("active");
+     }
+   });
 
 
-}); //scroll
 
+ }); //scroll
 
 
 
